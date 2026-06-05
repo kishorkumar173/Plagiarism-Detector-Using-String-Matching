@@ -1,0 +1,5 @@
+Artificial Intelligence is transforming industries.
+Machine learning enables systems to learn automatically.
+Data science is useful in modern applications.
+Natural language processing improves communication.
+Python is commonly used in machine learning.

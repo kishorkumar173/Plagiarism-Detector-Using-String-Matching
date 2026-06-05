@@ -1,0 +1,15 @@
+========== PLAGIARISM REPORT ==========
+
+Naive Matching Score: 40.00%
+KMP Matching Score: 40.00%
+Rabin-Karp Score: 40.00%
+Jaccard Similarity Score: 75.86%
+
+Final Plagiarism Percentage: 48.97%
+
+========== MATCHED SENTENCES ==========
+1. Artificial Intelligence is transforming industries.
+2. Natural language processing improves communication.
+
+========== COMMON WORDS ==========
+automatically, in, applications, industries, used, artificial, machine, modern, communication, learn, science, language, natural, learning, python, data, transforming, improves, intelligence, is, systems, processing
