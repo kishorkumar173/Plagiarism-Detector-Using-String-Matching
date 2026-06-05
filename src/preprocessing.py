@@ -4,6 +4,8 @@ import re
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 
+nltk.download('punkt')
+nltk.download('punkt_tab')
 # Download tokenizer once
 nltk.download("punkt")
 
