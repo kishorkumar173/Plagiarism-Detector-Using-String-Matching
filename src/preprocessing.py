@@ -2,12 +2,23 @@
 
 import re
 import nltk
-from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.tokenize import (
+    sent_tokenize,
+    word_tokenize
+)
 
-nltk.download('punkt')
-nltk.download('punkt_tab')
-# Download tokenizer once
-nltk.download("punkt")
+# -----------------------------------
+# Download NLTK resources only if missing
+# -----------------------------------
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt_tab')
 
 
 def clean_text(text):
@@ -15,19 +26,27 @@ def clean_text(text):
     Cleans input text.
 
     Steps:
-    - convert to lowercase
-    - remove punctuation
-    - remove extra spaces
+    - Convert to lowercase
+    - Remove punctuation
+    - Remove extra spaces
     """
 
-    # lowercase
+    # Convert to lowercase
     text = text.lower()
 
-    # remove punctuation
-    text = re.sub(r"[^\w\s]", "", text)
+    # Remove punctuation
+    text = re.sub(
+        r"[^\w\s]",
+        "",
+        text
+    )
 
-    # remove extra spaces
-    text = re.sub(r"\s+", " ", text).strip()
+    # Remove extra spaces
+    text = re.sub(
+        r"\s+",
+        " ",
+        text
+    ).strip()
 
     return text
 
@@ -35,7 +54,7 @@ def clean_text(text):
 def sentence_tokenization(text):
     """
     Splits text into sentences.
-    """ 
+    """
 
     return sent_tokenize(text)
 
